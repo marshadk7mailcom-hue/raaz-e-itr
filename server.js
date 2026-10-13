@@ -27,14 +27,11 @@ app.get("/api/health", (req, res) => {
     store: "RAAZ E ITR"
   });
 });
+app.use(express.static(__dirname));
 
-app.use(express.static(path.join(__dirname,"public")));
- app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"), (err) => {
-    if (err) res.send("RAAZ E ITR is Live - API check: /api/health");
-  });
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
 });
-
 if (require.main === module) {
   app.listen(PORT, "0.0.0.0", () => {
     console.log('RAAZ E ITR running at http://localhost:${PORT}');

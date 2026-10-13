@@ -28,7 +28,12 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname,"public")));
+ app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"), (err) => {
+    if (err) res.send("RAAZ E ITR is Live - API check: /api/health");
+  });
+});
 
 if (require.main === module) {
   app.listen(PORT, "0.0.0.0", () => {

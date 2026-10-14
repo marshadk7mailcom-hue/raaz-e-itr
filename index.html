@@ -438,7 +438,6 @@ function renderProducts() {
     </article>
   `).join("");
 }
-
 function addToCart(id) {
   const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
 
@@ -446,21 +445,22 @@ function addToCart(id) {
     alert("Your cart limit is 10 items.");
     return;
   }
-
   const item = cart.find(i => i.id === id);
-
   if (item) {
     item.qty++;
   } else {
     cart.push({ id, qty: 1 });
   }
-
   updateCart();
-
-  const perfume = perfumes.find(p => p.id === id);
-  alert(perfume.name + " added to your cart!");
+  // Auto open cart with animation
+setTimeout(() => {
+  document.getElementById("cartDrawer")?.classList.add("open");
+  document.getElementById("cartOverlay")?.classList.add("active");
+  document.getElementById("cartSidebar")?.classList.add("show");
+  // Agar upar wala na khule to cart button pe auto click
+  document.getElementById("cartCount")?.parentElement?.click();
+}, 150);
 }
-
 function updateCart() {
   const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
   document.getElementById("cartCount").textContent = totalItems;

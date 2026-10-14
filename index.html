@@ -356,106 +356,26 @@ footer p { color: #d5d8d0; font-size: 13px; line-height: 1.8; }
 
 <script>
 const perfumes = [
-  {
-    id: 1, name: "Oud Royale", category: "Men", price: 4500,
-    description: "Deep oud with warm woody notes.",
-    image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: 2, name: "Rose Elegance", category: "Women", price: 3800,
-    description: "A graceful floral-inspired fragrance.",
-    image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: 3, name: "Amber Nights", category: "Unisex", price: 5200,
-    description: "Warm amber with a refined character.",
-    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: 4, name: "Velvet Musk", category: "Unisex", price: 3200,
-    description: "Soft musk for a subtle everyday scent.",
-    image: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: 5, name: "Midnight Noir", category: "Men", price: 4900,
-    description: "A bold, modern fragrance profile.",
-    image: "https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: 6, name: "Bloom Essence", category: "Women", price: 3500,
-    description: "Fresh floral notes with a delicate feel.",
-    image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: 7, name: "Desert Oud", category: "Men", price: 6000,
-    description: "Rich woody notes inspired by the desert.",
-    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: 8, name: "Silk & Saffron", category: "Unisex", price: 4200,
-    description: "A warm scent with a sophisticated mood.",
-    image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: 9, name: "Royal Attar", category: "Men", price: 5500,
-    description: "Royal long lasting attar.",
-    image: "https://images.unsplash.com/photo-1594035910387-fea47794261f"
-  },
-  {
-    id: 10, name: "Jasmine Bloom", category: "Women", price: 3800,
-    description: "Sweet jasmine bloom.",
-    image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f"
-  },
-  {
-    id: 11, name: "Saffron Gold", category: "Men", price: 6000,
-    description: "Luxury saffron scent.",
-    image: "https://images.unsplash.com/photo-1541643600914-78b084683601"
-  },
-  {
-    id: 12, name: "White Musk", category: "Unisex", price: 3200,
-    description: "Clean white musk.",
-    image: "https://images.unsplash.com/photo-1594035910387-fea47794261f"
-  },
-  {
-    id: 13, name: "Oud Legacy", category: "Men", price: 7000,
-    description: "Legacy of pure oud.",
-    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539"
-  },
-  {
-    id: 14, name: "Rose Velvet", category: "Women", price: 3600,
-    description: "Velvety rose touch.",
-    image: "https://images.unsplash.com/photo-1541643600914-78b084683601"
-  },
-  {
-    id: 15, name: "Amber Wood", category: "Men", price: 5200,
-    description: "Amber with woody notes.",
-    image: "https://images.unsplash.com/photo-1594035910387-fea47794261f"
-  },
-  {
-    id: 16, name: "Floral Haze", category: "Women", price: 3400,
-    description: "Light floral haze.",
-    image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f"
-  },
-  {
-    id: 17, name: "Leather Noir", category: "Men", price: 5800,
-    description: "Intense leather.",
-    image: "https://images.unsplash.com/photo-1541643600914-78b084683601"
-  },
-  {
-    id: 18, name: "Candy Blush", category: "Women", price: 3000,
-    description: "Sweet candy blush.",
-    image: "https://images.unsplash.com/photo-1594035910387-fea47794261f"
-  },
-  {
-    id: 19, name: "Imperial Oud", category: "Men", price: 8000,
-    description: "Imperial oud for kings.",
-    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539"
-  },
-  {
-    id: 20, name: "Mystic Aura", category: "Women", price: 4000,
-    description: "Mystic aura for her.",
-    image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f"
-  },
+{ id: 1, name: "Oud Al Arab", category: "Men", price: 4500, description: "Rich oud fragrance", image: "https://images.unsplash.com/photo-1541643600914-78b084683601" },
+  { id: 2, name: "Rose Elisir", category: "Women", price: 3200, description: "Fresh rose aroma", image: "https://images.unsplash.com/photo-1594035910387-fea47794261f" },
+  { id: 3, name: "Amber Night", category: "Men", price: 5000, description: "Warm amber", image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f" },
+  { id: 4, name: "Vanilla Dream", category: "Women", price: 3500, description: "Sweet vanilla", image: "https://images.unsplash.com/photo-1541643600914-78b084683601" },
+  { id: 5, name: "Ocean Breeze", category: "Men", price: 4000, description: "Fresh aquatic", image: "https://images.unsplash.com/photo-1594035910387-fea47794261f" },
+  { id: 6, name: "Midnight Oud", category: "Men", price: 4800, description: "Deep oud", image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f" },
+  { id: 7, name: "Floral Bliss", category: "Women", price: 3000, description: "Floral mix", image: "https://images.unsplash.com/photo-1541643600914-78b084683601" },
+  { id: 8, name: "Citrus Spark", category: "Men", price: 3800, description: "Citrus fresh", image: "https://images.unsplash.com/photo-1594035910387-fea47794261f" },
+  { id: 9, name: "Royal Musk", category: "Men", price: 5500, description: "Royal musk", image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f" },
+  { id: 10, name: "Jasmine Bloom", category: "Women", price: 3300, description: "Jasmine sweet", image: "https://images.unsplash.com/photo-1541643600914-78b084683601" },
+  { id: 11, name: "Saffron Gold", category: "Men", price: 6000, description: "Luxury saffron", image: "https://images.unsplash.com/photo-1594035910387-fea47794261f" },
+  { id: 12, name: "Lily Touch", category: "Women", price: 3100, description: "Soft lily", image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f" },
+  { id: 13, name: "Desert Oud", category: "Men", price: 5200, description: "Desert oud", image: "https://images.unsplash.com/photo-1541643600914-78b084683601" },
+  { id: 14, name: "Pink Velvet", category: "Women", price: 3400, description: "Velvety rose", image: "https://images.unsplash.com/photo-1594035910387-fea47794261f" },
+  { id: 15, name: "Leather Noir", category: "Men", price: 5800, description: "Leather intense", image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f" },
+  { id: 16, name: "White Musk", category: "Women", price: 3600, description: "Clean musk", image: "https://images.unsplash.com/photo-1541643600914-78b084683601" },
+  { id: 17, name: "Tobacco Blaze", category: "Men", price: 5400, description: "Warm tobacco", image: "https://images.unsplash.com/photo-1594035910387-fea47794261f" },
+  { id: 18, name: "Candy Rose", category: "Women", price: 3200, description: "Candy sweet", image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f" },
+  { id: 19, name: "Imperial Oud", category: "Men", price: 6500, description: "Imperial oud", image: "https://images.unsplash.com/photo-1541643600914-78b084683601" },
+  { id: 20, name: "Mystic Aura", category: "Women", price: 3700, description: "Mystic floral", image: "https://images.unsplash.com/photo-1594035910387-fea47794261f" }
 ];
 
 let cart = [];

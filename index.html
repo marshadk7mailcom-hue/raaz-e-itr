@@ -333,6 +333,21 @@ footer p { color: #d5d8d0; font-size: 13px; line-height: 1.8; }
     </div>
     <p id="cartMessage" class="note">You can add up to 10 items.</p>
     <div id="cartItems"></div>
+    <div id="deliveryForm">
+  <h3>Delivery Details</h3>
+
+  <input id="customerName" type="text"
+    placeholder="Your Full Name" required>
+
+  <input id="customerPhone" type="tel"
+    placeholder="Mobile Number" required>
+
+  <input id="customerCity" type="text"
+    placeholder="Your City" required>
+
+  <textarea id="customerAddress"
+    placeholder="Complete Delivery Address" required></textarea>
+</div>
     <h3>Total: Rs. <span id="cartTotal">0</span></h3>
     <button class="checkout" onclick="checkout()">Continue to Order on WhatsApp</button>
     <p class="note">Your order details will be sent through WhatsApp. Payment is not processed on this website.</p>
@@ -516,6 +531,15 @@ function closeCart() {
 }
 
 function checkout() {
+  const customerName = document.getElementById("customerName").value.trim();
+const customerPhone = document.getElementById("customerPhone").value.trim();
+const customerCity = document.getElementById("customerCity").value.trim();
+const customerAddress = document.getElementById("customerAddress").value.trim();
+
+if (!customerName || !customerPhone || !customerCity || !customerAddress) {
+  alert("Please fill in all delivery details.");
+  return;
+}
   if (!cart.length) {
     alert("Please add a perfume to your cart first.");
     return;
@@ -536,12 +560,17 @@ function checkout() {
     return sum + perfume.price * item.qty;
   }, 0);
 
-  const message =
-    "Assalam-o-Alaikum! I want to order from RAAZ E ITR.\n\n" +
-    orderItems.join("\n\n") +
-    "\n\nTOTAL: Rs. " + total.toLocaleString("en-PK") +
-    "\n\nPlease confirm my order and delivery charges.";
-
+ const message =
+  "Assalam-o-Alaikum! I want to order from RAAZ E ITR.\n\n" +
+  "CUSTOMER DETAILS\n" +
+  "Name: " + customerName + "\n" +
+  "Mobile: " + customerPhone + "\n" +
+  "City: " + customerCity + "\n" +
+  "Address: " + customerAddress + "\n\n" +
+  "ORDER DETAILS\n" +
+  orderItems.join("\n\n") +
+  "\n\nTOTAL: Rs. " + total.toLocaleString("en-PK") +
+  "\n\nPlease confirm my order and delivery charges.";
   
 const whatsappURL =
   "https://wa.me/923094127093?text=" + encodeURIComponent(message);

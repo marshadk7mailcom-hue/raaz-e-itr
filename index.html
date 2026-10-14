@@ -399,7 +399,7 @@ const perfumes = [
 ];
 
 let cart = [];
-const MAX_ITEMS = 10;
+const MAX_ITEMS = 20;
 
 function renderProducts() {
   const query = document.getElementById("search").value.toLowerCase();
@@ -424,7 +424,7 @@ function renderProducts() {
   const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
 
   container.innerHTML = list.map(p => `
-    <article class="card">
+   <article class="card" onclick="addToCart(${p.id})" style="cursor:pointer">
       <img src="${p.image}" alt="${p.name}" loading="lazy">
       <div class="card-body">
         <span class="tag">${p.category} • Fragrance</span>
@@ -582,12 +582,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 renderProducts();
 updateCart();
 </script>
-<a
-  class="whatsapp"
-  href="https://wa.me/923094127093?text=Assalam-o-Alaikum%2C%20mujhe%20RAAZ%20E%20ITR%20se%20perfume%20order%20karna%20hai"
-  target="_blank"
-  rel="noopener noreferrer"
->Order on WhatsApp</a>
+
 
 </body>
 </html>
